@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Signout user from current session
+Resources:
+  UserCognitoIDPSignoutFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: com.mybank.aws.UserCognitoSignoutFunctionHandler
+      Runtime: java8
+      CodeUri: .
+      Description: Signout user from current session
+      MemorySize: 512
+      Timeout: 15
+      Role: 'arn:aws:iam::381233585660:role/basic_lambda_s3_apigateway_role'
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /idpsignout
+            Method: POST

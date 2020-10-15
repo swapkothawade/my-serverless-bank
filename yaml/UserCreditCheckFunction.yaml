@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: This Functions check user credit history and updated status in DB accordingly.
+Resources:
+  UserCreditCheckFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: com.mybank.aws.UserLoanRequestCreditCheckFunction
+      Runtime: java8
+      CodeUri: .
+      Description: >-
+        This Functions check user credit history and updated status in DB
+        accordingly.
+      MemorySize: 512
+      Timeout: 15
+      Role: 'arn:aws:iam::381233585660:role/basic_lambda_s3_apigateway_role'
+      Events:
+        SQS1:
+          Type: SQS
+          Properties:
+            Queue:
+              'Fn::GetAtt':
+                - SQSQueue1
+                - Arn
+            BatchSize: 10
+  SQSQueue1:
+    Type: 'AWS::SQS::Queue'
+    Properties: {}

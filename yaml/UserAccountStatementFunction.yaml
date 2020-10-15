@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Deals with account statment
+Resources:
+  UserAccountStatementFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: com.mybank.aws.UserAccountStatmentFunctionHandler
+      Runtime: java8
+      CodeUri: .
+      Description: Deals with account statement
+      MemorySize: 512
+      Timeout: 15
+      Role: 'arn:aws:iam::381233585660:role/basic_lambda_s3_apigateway_role'

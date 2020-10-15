@@ -1,0 +1,124 @@
+{
+  "body": "{\n    \"username\": \"swaraskothawade@gmail.com\",\n    \"loanType\": \"Home Loan\",\n    \"loanAmount\": 50,\n    \"rateOfInterest\": 15,\n    \"loanDurationInMonth\": 6\n}",
+  "resource": "/{proxy+}",
+  "path": "/path/to/resource",
+  "httpMethod": "POST",
+  "isBase64Encoded": true,
+  "queryStringParameters": {
+    "foo": "bar"
+  },
+  "multiValueQueryStringParameters": {
+    "foo": [
+      "bar"
+    ]
+  },
+  "pathParameters": {
+    "proxy": "/path/to/resource"
+  },
+  "stageVariables": {
+    "baz": "qux"
+  },
+  "headers": {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Accept-Encoding": "gzip, deflate, sdch",
+    "Accept-Language": "en-US,en;q=0.8",
+    "Cache-Control": "max-age=0",
+    "CloudFront-Forwarded-Proto": "https",
+    "CloudFront-Is-Desktop-Viewer": "true",
+    "CloudFront-Is-Mobile-Viewer": "false",
+    "CloudFront-Is-SmartTV-Viewer": "false",
+    "CloudFront-Is-Tablet-Viewer": "false",
+    "CloudFront-Viewer-Country": "US",
+    "Host": "1234567890.execute-api.us-east-2.amazonaws.com",
+    "Upgrade-Insecure-Requests": "1",
+    "User-Agent": "Custom User Agent String",
+    "Via": "1.1 08f323deadbeefa7af34d5feb414ce27.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Id": "cDehVQoZnx43VYQb9j2-nvCh-9z396Uhbp027Y2JvkCPNLmGJHqlaA==",
+    "X-Forwarded-For": "127.0.0.1, 127.0.0.2",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https",
+    "Authorization":"eyJraWQiOiJXWXF4WEtRY2Q0MnU1cm1WWm1WZ0pqK0pHcVpRQUxLQVwvZGRDVk9nU2V2VT0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlYjdlNmIxZS01ZmFlLTQ3YTUtYWMxNi0xZmJlYzkyMWFlN2IiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfU3YxS2RIT2g4IiwiY29nbml0bzp1c2VybmFtZSI6InVzZXIxMDEiLCJhdWQiOiI3dGdzZjltN3UyamNlcnZxZXNzNzFyOGxjZCIsImV2ZW50X2lkIjoiYjg5MjE2MzQtMzY4Zi00MGQyLWI1ODMtYmVmZDQ1MDFmNmZmIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE1OTk4NTI5NDcsIm5hbWUiOiJTd2FyYSIsInBob25lX251bWJlciI6IisxNDU4NDU4MzY5MiIsImV4cCI6MTU5OTg1NjU0NywiaWF0IjoxNTk5ODUyOTQ3LCJmYW1pbHlfbmFtZSI6IktvdGhhd2FkZSIsImVtYWlsIjoic3dhcmFza290aGF3YWRlQGdtYWlsLmNvbSJ9.m4PlaK5FVC3EyITJZhECebI3qqfheAt3-WUsnrxRH-FqOTjEG-kP66ngOsZs5_LWQteZogszm9ga-6V2SHftQfS72Xc4ljU_Vn4cmKW6KWjSfiVnkemD_zDdeo3SV8Pvh-NKaxlyo_af6HWSqEYug_wrMQyXTXT4jziXGOfhnf36JY4Z_SmaS0DW0gt9kwo9e-bC-UAE5Hwuyas2wPMt6BeAPH4iCfPM9yXlESKzDC1Wydu_PxUjuVCwP9mc1QTJ01u_Q37iG9mwfwtmRyRCOpNeHkJgo5XdrRvr8lN3cYt-lYLJ45B_218RqtTDh8nA5QZxQP495vOOi3eeD8f73w"
+  },
+  "multiValueHeaders": {
+    "Accept": [
+      "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+    ],
+    "Accept-Encoding": [
+      "gzip, deflate, sdch"
+    ],
+    "Accept-Language": [
+      "en-US,en;q=0.8"
+    ],
+    "Cache-Control": [
+      "max-age=0"
+    ],
+    "CloudFront-Forwarded-Proto": [
+      "https"
+    ],
+    "CloudFront-Is-Desktop-Viewer": [
+      "true"
+    ],
+    "CloudFront-Is-Mobile-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-SmartTV-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-Tablet-Viewer": [
+      "false"
+    ],
+    "CloudFront-Viewer-Country": [
+      "US"
+    ],
+    "Host": [
+      "0123456789.execute-api.us-east-2.amazonaws.com"
+    ],
+    "Upgrade-Insecure-Requests": [
+      "1"
+    ],
+    "User-Agent": [
+      "Custom User Agent String"
+    ],
+    "Via": [
+      "1.1 08f323deadbeefa7af34d5feb414ce27.cloudfront.net (CloudFront)"
+    ],
+    "X-Amz-Cf-Id": [
+      "cDehVQoZnx43VYQb9j2-nvCh-9z396Uhbp027Y2JvkCPNLmGJHqlaA=="
+    ],
+    "X-Forwarded-For": [
+      "127.0.0.1, 127.0.0.2"
+    ],
+    "X-Forwarded-Port": [
+      "443"
+    ],
+    "X-Forwarded-Proto": [
+      "https"
+    ]
+  },
+  "requestContext": {
+    "accountId": "123456789012",
+    "resourceId": "123456",
+    "stage": "prod",
+    "requestId": "c6af9ac6-7b61-11e6-9a41-93e8deadbeef",
+    "requestTime": "09/Apr/2015:12:34:56 +0000",
+    "requestTimeEpoch": 1428582896000,
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "accessKey": null,
+      "sourceIp": "127.0.0.1",
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "Custom User Agent String",
+      "user": null
+    },
+    "path": "/prod/path/to/resource",
+    "resourcePath": "/{proxy+}",
+    "httpMethod": "POST",
+    "apiId": "1234567890",
+    "protocol": "HTTP/1.1"
+  }
+}

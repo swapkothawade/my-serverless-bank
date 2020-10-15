@@ -1,0 +1,105 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Request token
+Resources:
+  UserCognitoIDPFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: com.mybank.aws.UserCognitoIDPFunctionHandler
+      Runtime: java8
+      CodeUri: .
+      Description: Request token
+      MemorySize: 512
+      Timeout: 15
+      Role: 'arn:aws:iam::381233585660:role/basic_lambda_s3_apigateway_role'
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /login
+            Method: POST
+  UserCognitoIDPSignoutFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: com.mybank.aws.UserCognitoSignoutFunctionHandler
+      Runtime: java8
+      CodeUri: .
+      Description: Signout user from current session
+      MemorySize: 512
+      Timeout: 15
+      Role: 'arn:aws:iam::381233585660:role/basic_lambda_s3_apigateway_role'
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /idpsignout
+            Method: POST
+  UserCognitoIDPSignUpFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: com.mybank.aws.UserCognitoIDPSignupFunctionHandler
+      Runtime: java8
+      CodeUri: .
+      Description: Allows user to register in Cognito
+      MemorySize: 512
+      Timeout: 15
+      Role: 'arn:aws:iam::381233585660:role/basic_lambda_s3_apigateway_role'
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /signup
+            Method: POST
+  UserAccountFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: com.mybank.aws.UserAccountFunctionHandler
+      Runtime: java8
+      CodeUri: .
+      Description: Responsible for Users Account related activities
+      MemorySize: 512
+      Timeout: 15
+      Role: 'arn:aws:iam::381233585660:role/basic_lambda_s3_apigateway_role'
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /MyResource
+            Method: ANY
+        Api2:
+          Type: Api
+          Properties:
+            Path: '/statement/{accountid}/{format}'
+            Method: GET
+  UserAccountStatementFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: com.mybank.aws.UserAccountStatmentFunctionHandler
+      Runtime: java8
+      CodeUri: .
+      Description: Deals with account statement
+      MemorySize: 512
+      Timeout: 15
+      Role: 'arn:aws:iam::381233585660:role/basic_lambda_s3_apigateway_role'    
+        
+  UserLoanFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: com.mybank.aws.UserLoanFunctionHandler
+      Runtime: java8
+      CodeUri: .
+      Description: Allow User to apply loan
+      MemorySize: 512
+      Timeout: 15
+      Role: 'arn:aws:iam::381233585660:role/basic_lambda_s3_apigateway_role'
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /loan
+            Method: POST
+        Api2:
+          Type: Api
+          Properties:
+            Path: /loan
+            Method: POST
