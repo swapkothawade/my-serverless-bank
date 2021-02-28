@@ -21,11 +21,12 @@ SAM CLI
 AWS Eclipse SDK
 
 AWS Services Used :
-  S3
-  Lambda
-  Cognito
-  API Gateway
-  SNS
+  S3,
+  Lambda,
+  Cognito,
+  API Gateway,
+  SNS,
   SQS
+  EC2
 
 MongoDB on EC2
